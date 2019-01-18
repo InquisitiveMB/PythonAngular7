@@ -1,0 +1,13 @@
+
+<div class="login-page">
+    <div class="form">
+        <form class="login-form" (submit)="login()">
+            <input type="text" placeholder="Enter Username" id="uname" onchange="nameCheck()" [(ngModel)]="credentials.uname"required>
+            <input type="password" placeholder="Enter Password" name="psw" onchange="passCheck()" [(ngModel)]="credentials.psw" required> 
+            <button type="submit" class="button_login">Log in</button>
+            <!-- <button routerLink="/cards" type="submit" class="button_login">Log in</button> -->
+            <p class="message">Not Registered? <a routerLink="/register">Register</a></p>
+        </form>
+    </div>
+</div>
+    

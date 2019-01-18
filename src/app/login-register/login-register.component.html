@@ -1,0 +1,38 @@
+<div class="login-page">
+    <div class="form">
+       <form class="login-form" (submit)="register()" action="">
+           <input type="text" placeholder="Enter Username" id="uname" name="uname" [(ngModel)]="credentials.uname" onchange="nameCheck()" required>
+           
+           <input type="text" placeholder="Enter email Id" id="email" name="email" [(ngModel)]="credentials.email" onchange="emailCheck()" required>
+           
+           <input type="text" placeholder="Enter your mobile number" id="contact" name="contact" [(ngModel)]="credentials.contact" onchange="phoneCheck()" required>
+            <select name="gender" [(ngModel)]="credentials.gender">
+                <option value="0">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <select name="age" [(ngModel)]="credentials.age">
+                <option value="0">Select Age</option>
+                <option value="11-20">11-20</option>
+                <option value="21-30">21-30</option>
+                <option value="31-40">31-40</option>
+                <option value="41-50">41-50</option>
+                <option value="51-60">51-60</option>
+                <option value="61-70">61-70</option>
+                <option value="71-80">71-80</option>
+                <option value="81-90">81-90</option>
+                <option value="90-100">90-100</option>
+                <option value="100 & Above">100 & Above</option>
+            </select>
+            <input type="password" id="psw" name="psw" [(ngModel)]="credentials.psw" placeholder="Enter Password" onchange="validPass()" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+           
+            <input type="password" placeholder="Confirm password" id="cpsw" name="cpsw" onchange="passCheck()" required>
+           
+            <button type="submit" class="button_register">Register</button>
+            <p class="message">Already Registered? <a routerLink="/login">Login</a></p>
+       </form>
+    </div>
+   </div>
+   
+ 
